@@ -30,7 +30,7 @@
                         <Insets />
                      </VBox.margin>
                   </TextField>
-                  <Label fx:id="nameValidation" text="El campo contiene errores" textFill="#ff6767" />
+                  <Label fx:id="nameValidation" textFill="#ff6767" />
                </children>
             </VBox>
             <VBox fx:id="lastnameContainer" prefHeight="40.0" prefWidth="85.0">
@@ -41,7 +41,7 @@
                         <Insets />
                      </VBox.margin>
                   </TextField>
-                  <Label fx:id="lastnameValidation" text="El campo contiene errores" textFill="#ff6767" />
+                  <Label fx:id="lastnameValidation" textFill="#ff6767" />
                </children>
             </VBox>
             <VBox fx:id="emailContainer" prefHeight="40.0" prefWidth="85.0">
@@ -52,14 +52,14 @@
                         <Insets />
                      </VBox.margin>
                   </TextField>
-                  <Label fx:id="emailValidation" text="El campo contiene errores" textFill="#ff6767" />
+                  <Label fx:id="emailValidation" textFill="#ff6767" />
                </children>
             </VBox>
             <VBox fx:id="passwordControl" prefHeight="40.0" prefWidth="85.0">
                <children>
                   <Label text="Contraseña" textAlignment="JUSTIFY" textFill="WHITE" />
                   <PasswordField fx:id="password" onKeyReleased="#handleKeyTypedPasswordField" />
-                  <Label fx:id="passwordValidation" text="El campo contiene errores" textFill="#ff6767" />
+                  <Label fx:id="passwordValidation" textFill="#ff6767" />
                </children>
             </VBox>
          </children>

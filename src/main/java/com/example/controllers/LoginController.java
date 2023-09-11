@@ -5,6 +5,7 @@ import java.io.IOException;
 import com.example.models.Users;
 import com.example.repository.UserRepositoryImpl;
 import com.example.selectors.LoginSelector;
+import com.example.utils.Animations;
 import com.example.utils.HashPassword;
 
 import javafx.event.ActionEvent;
@@ -17,6 +18,8 @@ public class LoginController extends LoginSelector {
         String userEmail = email.getText();
 
         Users user = repository.findByEmail(userEmail);
+
+        Animations animation = new Animations();
 
         if (user != null) {
             String fieldPassword = password.getText();
@@ -37,8 +40,15 @@ public class LoginController extends LoginSelector {
                 userRepositoryImpl.save(user);
             }
             else {
+
+                animation.setFadeIn(alert);
                 System.out.println("Los datos son incorrectos");
             }
+        }
+        else {
+            // alert.setOpacity(0);
+            animation.setFadeIn(alert);
+            System.out.println("Los datos son incorrectos");
         }
     }
 
